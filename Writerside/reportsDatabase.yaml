@@ -1,0 +1,153 @@
+title: Reports Database API
+summary: API endpoint for SN reports Database
+description: Work with our Reports Database to implement our Verified Reports into your projects or Work with us
+termsOfService: https://satowa-network.eu/tos
+contact:
+  name: Satowa Network Developers
+  email: dev@satowa-network.eu
+license:
+    name: "CC-BY-NC-ND 4.0"
+    identifier: "CC-BY-NC-ND-4.0"
+    url: "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode"
+version: 3.1.0
+
+servers:
+  - url: https://api.satowa-network.eu/{latestVersion}
+    description: Production Server
+    variables:
+      latestVersion:
+        default: v4
+  - url: https://api.satowa-network.dev/{developmentVersion}
+    description: Development Server
+    variables:
+      developmentVersion:
+        default: v5
+tags:
+  - Reports
+
+paths:
+  /reports:
+    get:
+      summary: Get a list of verified reports
+      operationId: getReports
+      tags:
+        - Reports
+      description: Get a list of verified reports. You can filter the results by user ID, category, and platform.
+      parameters:
+        - name: uid
+          in: query
+          required: false
+          explode: true
+          schema:
+            type: string
+            description: The uid of the user to get the reports for.
+        - name: category
+          in: query
+          required: false
+          explode: true
+          schema:
+            type: string
+            description: The category of the reports to get.
+        - name: platform
+          in: query
+          required: false
+          explode: true
+          schema:
+            type: string
+            description: The platform of the reports to get.
+      content:
+        application/json:
+          schema:
+            type:
+              array
+            items:
+              type: object
+              properties:
+                reportedBy:
+                  type: string
+                  example: "as654asf"
+                reportedUser:
+                  type: string
+                  example: "d6fg5sdg"
+                platform:
+                  type: string
+                  example: "guilded"
+                category:
+                  type: string
+                  example: "tos_violation"
+                verified:
+                  type: boolean
+                  example: true
+      responses:
+        '200':
+          summary: OK
+          description: OK. A list of verified reports is returned.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    reportedBy:
+                      type: string
+                      example: "as654asf"
+                    reportedUser:
+                      type: string
+                      example: "d6fg5sdg"
+                    platform:
+                      type: string
+                      example: "guilded"
+                    category:
+                      type: string
+                      example: "tos_violation"
+                    verified:
+                      type: boolean
+                      example: true
+        '404':
+          summary: Not found
+          description: Not found. The requested resource could not be found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Resource not found."
+                    description: The error message.
+        '500':
+          summary: Internal Server Error
+          description: Internal server error. An unexpected error occurred.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Internal server error."
+                    description: The error message.
+      security:
+        - bearerAuth: []
+  /reports/add:
+    post:
+      summary: Add a verified report
+      operationId: addReport
+      tags:
+        - Reports
+      description: Add a verified report to the database.
+      consumes:
+        - multipart/form-data
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                reportedBy:
+                  type: string
+                  example: "as654asf"
+                reportedUser:
+                  type: string
+                  example: "d6fg5sdg"

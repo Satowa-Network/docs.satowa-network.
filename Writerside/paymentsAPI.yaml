@@ -1,0 +1,179 @@
+swagger: "2.0"
+info:
+  title: Payments API
+  description: API Endpoint for the Satowa Network Economy System
+  version: 1.0.0
+host: api.satowa-network.eu
+schemes:
+  - https
+paths:
+  /payments/:userID:
+    get:
+      summary: Get your Bank Data
+      description: returns all your Bank Data connected with the API Key
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          headers:
+            Authorization:
+              description: "Your own API Key"
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: "success"
+                uid:
+                  type: string
+                  example: "user_abcdefg"
+                iban:
+                  type: string
+                  example: "ATABC12345"
+                balance:
+                  type: integer
+                  example: 50
+                code:
+                  type: string
+                  example: "ABCabc12345"
+                lastChange:
+                  type: string
+                  example: "2023-11-07 23:29:54.752683+01"
+                userCreated:
+                  type: string
+                  example: "2023-08-22 13:17:32.100703+02"
+                isActive:
+                    type: boolean
+                    example: true
+        500:
+          description: Internal Server Error
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: false
+                error:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+                      example: Unknown error in Line 0
+                    code:
+                      type: string
+                      example: 2222A
+        default:
+          description: OK
+          headers:
+            Authorization:
+              description: "Your own API Key"
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: "success"
+                uid:
+                  type: string
+                  example: "user_abcdefg"
+                iban:
+                  type: string
+                  example: "ATABC12345"
+                balance:
+                  type: integer
+                  example: 50
+                code:
+                  type: string
+                  example: "ABCabc12345"
+                lastChange:
+                  type: string
+                  example: "2023-11-07 23:29:54.752683+01"
+                userCreated:
+                  type: string
+                  example: "2023-08-22 13:17:32.100703+02"
+                isActive:
+                  type: boolean
+                  example: true
+  /payments/:sender/send/:receiver:
+    post:
+      summary: Create a payments
+      description: Send money between two private persons
+      consumes:
+        - application/json
+      parameters:
+        - name: sender
+          in: path
+          description: Wallet ID of the sender
+          required: true
+          schema:
+            type: integer
+            format: uuid
+        - name: receiver
+          in: path
+          description: Wallet ID of the receiver
+          required: true
+          schema:
+            type: integer
+            format: uuid
+        - name: code
+          in: formData
+          description: The senders Wallet Code
+          required: true
+          schema:
+            type: string
+            format: password
+        - name: amount
+          in: formData
+          description: The amount the sender have to pay
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: description
+          in: formData
+          description: A description for the Payment
+          required: false
+          schema:
+            type: string
+
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          headers:
+            Authorization:
+              description: Your Satowa Network API Key
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: true
+                message:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        description:
+                          type: string
+                          example: Transaction
+                        amount:
+                          type: integer
+                          example: 500
+                        transaction_id:
+                          type: string
+                          example: transaction_d5v1ds5
