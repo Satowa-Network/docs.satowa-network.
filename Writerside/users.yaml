@@ -1,0 +1,107 @@
+swagger: "2.0"
+info:
+  title: Users Endpoint
+  description: API Endpoint for User Accounts & Interactions
+  version: 4.0.0-dev
+host: api.satowa-network.dev
+schemes:
+  - https
+paths:
+  /v4/users/:userID:
+    get:
+      summary: Get the given User Information
+      description: Get all your User Information by your User ID. Mostly used by Satowa Network Systems
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          headers:
+            Authorization:
+              description: Your own User ID or Satowa Network Agent Key
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: true
+                uid:
+                  type: string
+                  example: "test_55"
+                eMail:
+                  type: string
+                  example: "username@domain.tld"
+                password:
+                  type: string
+                  example: "hashedPassword"
+                username:
+                  type: string
+                  example: "ExampleUsername"
+                ip:
+                  type: string
+                  example: "0.0.0.0"
+                twoFactor:
+                  type: boolean
+                  example: false
+                  default: false
+                verified:
+                  type: boolean
+                  example: false
+                  default: false
+                discordId:
+                  type: string
+                  example:
+                    "123456789"
+                  default: null
+                revoltId:
+                  type: string
+                  example:
+                    "123456789"
+                  default: null
+                guildedId:
+                  type: string
+                  example:
+                    "123456789"
+                  default: null
+                lastChanged:
+                  type: string
+                  example:
+                    null
+                  default: null
+  /v4/users/create:
+    post:
+      summary: Create a new User
+      description: Create a new Satowa Network User with all data
+      consumes:
+        - application/json
+      parameters:
+        - name: username
+          in: formData
+          description: The Username of the Account
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: formData
+          description: The email of the Account
+          required: true
+          schema:
+            type: string
+            format: email
+        - name: password
+          in: formData
+          description: THe password of the Account
+          required: true
+          schema:
+            type: string
+            format: password
+        - name: country
+          in: formData
+          description: The country of the Account
+          required: true
+          schema:
+            type: string
+            maxLength: 2

@@ -9,6 +9,7 @@
     <toc-element topic="api-docs.md"/>
     <toc-element topic="API-quickstart.md"/>
     <toc-element topic="API-reference.md">
+        <toc-element topic="users.md"/>
         <toc-element topic="payments-api.md"/>
         <toc-element topic="reportsDB.md"/>
     </toc-element>
