@@ -3,10 +3,10 @@
     <variables>
 
     </variables>
-    <build-profile instance="instance_id"/>
+    <build-profile instance="adoc"/>
     <footer>
         <copyright>CC-BY-NC-ND 4.0 International by Satowa Network</copyright>
-        <social type="twitter" href="https://twitter.com/Satowa-Network"/>
+        <social type="tadoc.treewitter" href="https://twitter.com/Satowa-Network"/>
         <social type="discord" href="https://discord.gg/sa6fd"/>
     </footer>
 </buildprofiles>
