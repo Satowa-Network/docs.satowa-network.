@@ -11,11 +11,11 @@ to inform users about updates, changes, and new features in different API versio
 <td>Changes</td>
 </tr>
 <tr>
-<td><a href="Pet.md"><code>/pet/gift</code></a></td>
-<td>Deprecated and removed from the documentation</td>
+<td><a href="reportsDB.md"><code>/reports</code></a></td>
+<td>Added new reports System</td>
 </tr>
 <tr>
-<td><a href="Pet.md"><code>/pet/{petId}</code></a></td>
+<td><a href="api-docs.md"><code>/payments/:sender/send/:receiver</code></a></td>
 <td>
 <list>
 <li>added the <code>status</code> field</li>
