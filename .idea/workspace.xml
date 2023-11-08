@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64e4f03-45c0-4f54-95ce-7310036415c1" name="Changes" comment="Workspace">
-      <change beforePath="$PROJECT_DIR$/Writerside/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/openapi.yaml" afterDir="false" />
+    <list default="true" id="b64e4f03-45c0-4f54-95ce-7310036415c1" name="Changes" comment="Removed unused files and fixed everything">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/topics/users.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Writerside/users.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/adoc.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/adoc.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/paymentsAPI.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/paymentsAPI.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/topics/Changes.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Create-user.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Creates-list-of-users-with-given-input-array.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Delete-purchase-order-by-ID.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Delete-user.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Find-purchase-order-by-ID.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Get-user-by-user-name.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Logs-out-current-logged-in-user-session.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Logs-user-into-the-system.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Place-an-order-for-a-pet.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Returns-pet-inventories-by-status.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Store.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Update-user.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/User.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfg/buildprofiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cfg/buildprofiles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +36,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -64,6 +59,13 @@
           </list>
         </option>
       </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="production" />
+      </list>
     </option>
   </component>
   <component name="InstanceColorv3">
@@ -112,11 +114,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/slush/Dokumente/SatowaNetwork/Websites/php/doc",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "settings.editor.selected.configurable": "discord-application"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -133,6 +137,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="Updated" />
     <MESSAGE value="Workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace" />
+    <MESSAGE value="Removed unused files and fixed everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused files and fixed everything" />
   </component>
 </project>
