@@ -2,6 +2,17 @@
 
 <!-- Maintain a changelog or release notes section
 to inform users about updates, changes, and new features in different API versions -->
+## November 9, 2023
+<table>
+    <tr>
+        <td>Method</td>
+        <td>Changes</td>
+    </tr>
+    <tr>
+        <td><a href="API-reference.md"></a></td>
+        <td>Added an important Warning.</td>
+    </tr>
+</table>
 ## November 8, 2023
 <table>
     <tr>
