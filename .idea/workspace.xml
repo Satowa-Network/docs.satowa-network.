@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64e4f03-45c0-4f54-95ce-7310036415c1" name="Changes" comment="Removed unused files and fixed everything">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/topics/users.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Writerside/users.yaml" afterDir="false" />
+    <list default="true" id="b64e4f03-45c0-4f54-95ce-7310036415c1" name="Changes" comment="the rest of all">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/adoc.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/adoc.tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/paymentsAPI.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/paymentsAPI.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Writerside/topics/API-reference.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/API-reference.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Writerside/topics/Changes.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cfg/buildprofiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cfg/buildprofiles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +111,6 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/slush/Dokumente/SatowaNetwork/Websites/php/doc",
     "settings.editor.selected.configurable": "discord-application"
@@ -138,6 +131,9 @@
     <MESSAGE value="Updated" />
     <MESSAGE value="Workspace" />
     <MESSAGE value="Removed unused files and fixed everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unused files and fixed everything" />
+    <MESSAGE value="Added Users endpoint" />
+    <MESSAGE value="Fixed wrong documentation" />
+    <MESSAGE value="the rest of all" />
+    <option name="LAST_COMMIT_MESSAGE" value="the rest of all" />
   </component>
 </project>
