@@ -7,7 +7,7 @@ host: api.satowa-network.eu
 schemes:
   - https
 paths:
-  /v4/payments/:userID:
+  /v4/payments/:walletID:
     get:
       summary: Get your Bank Data
       description: returns all your Bank Data connected with the API Key
@@ -103,7 +103,7 @@ paths:
                 isActive:
                   type: boolean
                   example: true
-  /v4/payments/:userID/billings:
+  /v4/payments/:walletID/billings:
     get:
       summary: Get all your Transactions
       description: Get a list of all your Transactions you have made
@@ -166,14 +166,14 @@ paths:
       consumes:
         - application/json
       parameters:
-        - name: sender
+        - name: :sender
           in: path
           description: Wallet ID of the sender
           required: true
           schema:
             type: integer
             format: uuid
-        - name: receiver
+        - name: :receiver
           in: path
           description: Wallet ID of the receiver
           required: true
