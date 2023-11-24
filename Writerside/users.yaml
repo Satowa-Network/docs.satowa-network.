@@ -93,7 +93,7 @@ paths:
             format: email
         - name: password
           in: formData
-          description: THe password of the Account
+          description: The password of the Account
           required: true
           schema:
             type: string
