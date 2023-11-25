@@ -40,9 +40,6 @@ paths:
                 username:
                   type: string
                   example: "ExampleUsername"
-                ip:
-                  type: string
-                  example: "0.0.0.0"
                 twoFactor:
                   type: boolean
                   example: false
@@ -93,7 +90,7 @@ paths:
             format: email
         - name: password
           in: formData
-          description: THe password of the Account
+          description: The password of the Account
           required: true
           schema:
             type: string
