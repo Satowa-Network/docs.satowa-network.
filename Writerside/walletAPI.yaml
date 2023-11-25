@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
-  title: Payments API
-  description: API Endpoint for the Satowa Network Economy System
+  title: Wallet API
+  description: API Endpoint for the Satowa Network Globalised Economy System
   version: 4.0.0
 host: api.satowa-network.eu
 schemes:
@@ -9,8 +9,8 @@ schemes:
 paths:
   /v4/payments/:userID:
     get:
-      summary: Get your Bank Data
-      description: returns all your Bank Data connected with the API Key
+      summary: Get your Wallet Data
+      description: returns all your Wallet Data connected with the API Key
       produces:
         - application/json
       responses:
@@ -31,7 +31,7 @@ paths:
                 uid:
                   type: string
                   example: "user_abcdefg"
-                iban:
+                iwan:
                   type: string
                   example: "ATABC12345"
                 balance:
