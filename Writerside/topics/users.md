@@ -1,5 +1,6 @@
 # Users
-> **Please keep in mind that all of these endpoints are currently not available for everyone!**
+
+> **Keep in mind that this API Endpoint is current not for public and cant be accessible**
 >
 {style="warning"}
 

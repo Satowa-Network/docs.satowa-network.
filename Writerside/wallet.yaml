@@ -1,0 +1,239 @@
+swagger: "2.0"
+info:
+  title: Wallet API
+  description: API Endpoint for the Satowa Network Economy System
+  version: 4.0.0
+host: api.satowa-network.eu
+schemes:
+  - https
+paths:
+  /v4/payments/:userID:
+    get:
+      summary: Get your Wallet Data
+      description: returns all your Wallet Data connected with the API Key
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          headers:
+            Authorization:
+              description: "Your own API Key"
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: "success"
+                uid:
+                  type: string
+                  example: "user_abcdefg"
+                iwan:
+                  type: string
+                  example: "ATABC12345"
+                balance:
+                  type: integer
+                  example: 50.00
+                code:
+                  type: string
+                  example: "ABCabc12345"
+                lastChange:
+                  type: string
+                  example: "2023-11-07 23:29:54.752683+01"
+                userCreated:
+                  type: string
+                  example: "2023-08-22 13:17:32.100703+02"
+                isActive:
+                    type: boolean
+                    example: true
+        500:
+          description: Internal Server Error
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: false
+                error:
+                  type: object
+                  properties:
+                    message:
+                      type: string
+                      example: Unknown error in Line 0
+                    code:
+                      type: string
+                      example: 2222A
+        default:
+          description: OK
+          headers:
+            Authorization:
+              description: "Your own API Key"
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: "success"
+                uid:
+                  type: string
+                  example: "user_abcdefg"
+                iban:
+                  type: string
+                  example: "ATABC12345"
+                balance:
+                  type: integer
+                  example: 50.00
+                  format: float
+                code:
+                  type: string
+                  example: "ABCabc12345"
+                lastChange:
+                  type: string
+                  example: "2023-11-07 23:29:54.752683+01"
+                userCreated:
+                  type: string
+                  example: "2023-08-22 13:17:32.100703+02"
+                isActive:
+                  type: boolean
+                  example: true
+  /v4/payments/:userID/billings:
+    get:
+      summary: Get all your Transactions
+      description: Get a list of all your Transactions you have made
+      parameters:
+        - name: :walletID
+          in: path
+          type: string
+          required: true
+          description: Your wallerID from your Wallet Account
+      responses:
+        200:
+          description: OK
+          headers:
+            Authorization:
+              description: Your Account Token
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: true
+                  default: false
+                data:
+                  type: object
+                  items:
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          from:
+                            type: string
+                            example:
+                              AT123456
+                          to:
+                            type: string
+                            example:
+                              DE123456
+                          description:
+                            type: string
+                            example:
+                              Example transaction
+                            default: null
+                          balance:
+                            type: integer
+                            example: 50
+                            format: float
+                          creationDate:
+                            type: string
+                            example:
+                              2023-11-07 19:01:17.633654+01
+                          transactionId:
+                            type: string
+                            example:
+                              transaction_654a7b6d3a5393.27098131
+  /v4/payments/:sender/send/:receiver:
+    post:
+      summary: Send Coins to Private Person
+      description: Send Coins between two private persons
+      consumes:
+        - application/json
+      parameters:
+        - name: sender
+          in: path
+          description: Wallet ID of the sender
+          required: true
+          schema:
+            type: integer
+            format: uuid
+        - name: receiver
+          in: path
+          description: Wallet ID of the receiver
+          required: true
+          schema:
+            type: integer
+            format: uuid
+        - name: code
+          in: formData
+          description: The senders Wallet Code
+          required: true
+          schema:
+            type: string
+            format: password
+        - name: amount
+          in: formData
+          description: The amount you want to send
+          required: true
+          schema:
+            type: integer
+            format: float
+        - name: description
+          in: formData
+          description: A description for the Payment
+          required: false
+          schema:
+            type: string
+
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          headers:
+            Authorization:
+              description: Your Satowa Network API Key
+              type: string
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: true
+                message:
+                  type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        description:
+                          type: string
+                          example: Transaction
+                        amount:
+                          type: integer
+                          example: 500.00
+                          format: float
+                        transaction_id:
+                          type: string
+                          example: transaction_d5v1ds5

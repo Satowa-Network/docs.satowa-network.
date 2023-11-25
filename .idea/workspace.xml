@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64e4f03-45c0-4f54-95ce-7310036415c1" name="Changes" comment="Updated workspace">
+    <list default="true" id="b64e4f03-45c0-4f54-95ce-7310036415c1" name="Changes" comment="Removed unused files and fixed everything">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/adoc.tree" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/adoc.tree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/paymentsAPI.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/walletAPI.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/Changes.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/Changes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/payments-api.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/wallet.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Writerside/topics/users.md" beforeDir="false" afterPath="$PROJECT_DIR$/Writerside/topics/users.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +109,13 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/slush/Dokumente/SatowaNetwork/Websites/php/doc&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;production&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/slush/Dokumente/SatowaNetwork/Websites/php/docs.satowa-network.&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: [
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -134,12 +133,6 @@
     <MESSAGE value="Updated" />
     <MESSAGE value="Workspace" />
     <MESSAGE value="Removed unused files and fixed everything" />
-    <MESSAGE value="Added Users endpoint" />
-    <MESSAGE value="Fixed wrong documentation" />
-    <MESSAGE value="the rest of all" />
-    <MESSAGE value="Added an important warning and removed example" />
-    <MESSAGE value="Updated changelog" />
-    <MESSAGE value="Updated workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused files and fixed everything" />
   </component>
 </project>

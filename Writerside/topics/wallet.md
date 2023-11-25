@@ -1,2 +1,3 @@
-# Wallets API
-<api-doc openapi-path="./../walletAPI.yaml"/>
+# Payments API
+
+<api-doc openapi-path="./../wallet.yaml"/>
