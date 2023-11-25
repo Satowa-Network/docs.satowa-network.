@@ -2,12 +2,13 @@
 
 Hier kannst du ganze einfach Vorlagen finden wie Sie unsere API Nutzen können und wie die resultate ausgegeben werden.
 
-> A very important note about this API.
+> This Documentation page is pre Developed for the upcoming API Version. Keep in mind that most of the endpoint don't work. 
 > 
-{style="note"}
-<api-doc openapi-path="./../openapi.yaml">
+{style="warning"}
+<!--<api-doc openapi-path="./../openapi.yaml">
 
-</api-doc>
+</api-doc>-->
+
 <!-- Use the <api-doc> element to generate the documentation for a few specific endpoints and methods with the same tag 
 or <api-endpoint> element to generate the documentation for a specific endpoint and method.
 See the subsections here for specific examples. -->
