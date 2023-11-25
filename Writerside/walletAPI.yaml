@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
-  title: Payments API
-  description: API Endpoint for the Satowa Network Economy System
+  title: Wallet API
+  description: API Endpoint for the Satowa Network Globalised Economy System
   version: 4.0.0
 host: api.satowa-network.eu
 schemes:
@@ -9,8 +9,8 @@ schemes:
 paths:
   /v4/payments/:userID:
     get:
-      summary: Get your Bank Data
-      description: returns all your Bank Data connected with the API Key
+      summary: Get your Wallet Data
+      description: returns all your Wallet Data connected with the API Key
       produces:
         - application/json
       responses:
@@ -31,12 +31,12 @@ paths:
                 uid:
                   type: string
                   example: "user_abcdefg"
-                iban:
+                iwan:
                   type: string
                   example: "ATABC12345"
                 balance:
-                  type: integer
-                  example: 50
+                  type: number
+                  example: 50.00
                 code:
                   type: string
                   example: "ABCabc12345"
@@ -110,6 +110,8 @@ paths:
       parameters:
         - name: :walletID
           in: path
+          type: string
+          required: true
           description: Your wallerID from your Wallet Account
       responses:
         200:
@@ -148,9 +150,9 @@ paths:
                               Example transaction
                             default: null
                           balance:
-                            type: integer
+                            type: number
                             example:
-                              50
+                              50.00
                           creationDate:
                             type: string
                             example:
@@ -161,8 +163,8 @@ paths:
                               transaction_654a7b6d3a5393.27098131
   /v4/payments/:sender/send/:receiver:
     post:
-      summary: Send Money to Private Person
-      description: Send money between two private persons
+      summary: Send Coins between each other
+      description: Send Coins between two private persons
       consumes:
         - application/json
       parameters:
@@ -189,14 +191,13 @@ paths:
             format: password
         - name: amount
           in: formData
-          description: The amount the sender have to pay
+          description: The amount the sender have to send
           required: true
           schema:
-            type: integer
-            format: int64
+            type: number
         - name: description
           in: formData
-          description: A description for the Payment
+          description: A description for the Transaction
           required: false
           schema:
             type: string
