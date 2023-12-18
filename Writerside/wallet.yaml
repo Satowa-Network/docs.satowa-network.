@@ -7,7 +7,7 @@ host: api.satowa-network.eu
 schemes:
   - https
 paths:
-  /v4/payments/:userID:
+  /v4/payments/:IWAN:
     get:
       summary: Get your Wallet Data
       description: returns all your Wallet Data connected with the API Key
@@ -104,16 +104,16 @@ paths:
                 isActive:
                   type: boolean
                   example: true
-  /v4/payments/:userID/billings:
+  /v4/payments/:iwan/billings:
     get:
       summary: Get all your Transactions
       description: Get a list of all your Transactions you have made
       parameters:
-        - name: :walletID
+        - name: :iwan
           in: path
           type: string
           required: true
-          description: Your wallerID from your Wallet Account
+          description: Your IWAN from your Wallet Account
       responses:
         200:
           description: OK
@@ -162,23 +162,23 @@ paths:
                             type: string
                             example:
                               transaction_654a7b6d3a5393.27098131
-  /v4/payments/:sender/send/:receiver:
+  /v4/payments/:senderIwan/send/:receiverIwan:
     post:
       summary: Send Coins to Private Person
       description: Send Coins between two private persons
       consumes:
         - application/json
       parameters:
-        - name: sender
+        - name: senderIwan
           in: path
-          description: Wallet ID of the sender
+          description: Iwan of the sender
           required: true
           schema:
             type: integer
             format: uuid
         - name: receiver
           in: path
-          description: Wallet ID of the receiver
+          description: Iwan of the receiver
           required: true
           schema:
             type: integer
