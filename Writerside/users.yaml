@@ -120,3 +120,81 @@ paths:
           schema:
             type: string
             maxLength: 2
+  /v4/users/:userID/settings:
+    get:
+      summary: Get User Account Settings
+      description: Get all Account settings from the entered User ID
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Default success result
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example: true
+                  readOnly: true
+                uid:
+                  type: string
+                  example: "018c1f62-a22b-7192-bb89-15c29b989981"
+                  readOnly: true
+                profilePic:
+                  type: string
+                  example: "https://satowa-network.eu/assets/img/Account/Rotate-Blast-Violet.gif"
+                  readOnly: false
+                  default: "https://satowa-network.eu/assets/img/Account/Rotate-Blast-Violet.gif"
+                verifyToken:
+                  type: string
+                  example: null
+                  readOnly: true
+                twoFactor:
+                  type: boolean
+                  example: false
+                  default: false
+                  readOnly: false
+                blocked:
+                  type: boolean
+                  example: false
+                  default: false
+                  readOnly: true
+                discord:
+                  type: boolean
+                  example: false
+                  default: false
+                  readOnly: false
+                guilded:
+                  type: boolean
+                  example: true
+                  default: false
+                  readOnly: false
+                revolt:
+                  type: boolean
+                  example: true
+                  default: false
+                  readOnly: false
+                newsletter:
+                  type: boolean
+                  default: false
+                  readOnly: false
+                billing:
+                  type: boolean
+                  default: false
+                  readOnly: false
+                last_privacy_accepted:
+                  type: string
+                  default: Current timestamp
+                  readOnly: true
+                last_tos_accepted:
+                  type: string
+                  default: Current timestamp
+                  readOnly: true
+                created:
+                  type: string
+                  readOnly: true
+                isBusiness:
+                  type: boolean
+                  readOnly: true
