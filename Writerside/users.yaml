@@ -68,6 +68,24 @@ paths:
                   example:
                     null
                   default: null
+    delete:
+      produces:
+        - application/json
+      description: Delete the whole entered User
+      summary: Delete User Account
+      responses:
+        200:
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example:
+                    - true
+                  readOnly: true
   /v4/users/create:
     post:
       summary: Create a new User
