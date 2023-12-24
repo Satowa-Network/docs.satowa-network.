@@ -5,9 +5,9 @@ In this section, you'll find a step-by-step guide to quickly start using the API
 
 ## Authentication
 
-Unsere API ist für Entwickler die, die API nur Verwenden um Daten abzurufen wie Melden ist ohne einem API Key aufrufbar.
-Allerdings ist ein API Key verpflichtend, wenn es um private Daten geht oder POST, OPTION, PUT Anfragen gesendet werden
-
+Unsere API ist so aufgebaut das man für die meisten Anfragen die keine POST, PUT, DELETE, OPTION Methode sind keine
+API key benötigt. Allerdings sind bestimmte Endpunkte wie das abfragen von User und Wallet Daten mit einem Speziellen Agent
+oder auch User API Key verpflichtend. 
 Solltest du ein API Key brauchen wende dich bitte an uns unter der folgenden E-Mail: [dev@satowa-network.eu](mailto:dev@satowa-network.eu)
 
 Solltest du bereits eine API Key besitzen und die benötigst diese muss diese in deinem Header im "Authorization" Header Tag stehen.
@@ -25,7 +25,8 @@ Authorization: YOUR_ACCESS_TOKEN
 
 ## Response Handling
 
-Alle ausgaben, sind im JSON Format. Diese sind ganz einfach zu Verwenden.
+Solltest du eine Anfrage an uns senden wird immer im JSON Format geantwortet, dieses JSON Format kann von Statuscode zu Statuscode unterscheiden
+Siehe dazu [api-docs.md](api-docs.md)
 
 <!--## API Usage Tips
 Offer tips and best practices for using the API effectively and efficiently.
