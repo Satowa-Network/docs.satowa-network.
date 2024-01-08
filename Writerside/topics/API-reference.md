@@ -1,7 +1,6 @@
 # API Reference
 
-Hier kannst du ganze einfach Vorlagen finden wie Sie unsere API Nutzen können und wie die resultate ausgegeben werden.
-
+Here you can find an overview of all our API endpoints
 > This Documentation page is pre Developed for the upcoming API Version. Keep in mind that most of the endpoint don't work. 
 > 
 {style="warning"}

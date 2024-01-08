@@ -1,21 +1,20 @@
 # API Quickstart
 
 <!-- This document describes how to start using your API: authorization, authentication, accessing API resources. -->
-In this section, you'll find a step-by-step guide to quickly start using the API.
+In diesem Abschnitt finden Sie eine Schritt-für-Schritt-Anleitung für den schnellen Einstieg in die Nutzung der API.
 
 ## Authentication
 
-Unsere API ist so aufgebaut das man für die meisten Anfragen die keine POST, PUT, DELETE, OPTION Methode sind keine
-API key benötigt. Allerdings sind bestimmte Endpunkte wie das abfragen von User und Wallet Daten mit einem Speziellen Agent
-oder auch User API Key verpflichtend. 
-Solltest du ein API Key brauchen wende dich bitte an uns unter der folgenden E-Mail: [dev@satowa-network.eu](mailto:dev@satowa-network.eu)
+Our API is structured in such a way that for most requests that are not POST, PUT, DELETE, OPTION methods no
+API key is required. However, certain endpoints such as querying user and wallet data with a special agent
+or user API key are mandatory.
+If you need an API key, please contact us at the following e-mail: [dev@satowa-network.eu](mailto:dev@satowa-network.eu)
 
-Solltest du bereits eine API Key besitzen und die benötigst diese muss diese in deinem Header im "Authorization" Header Tag stehen.
-
+If you already have an API key and need it, it must be included in your header in the "Authorization" header tag.
 ## Making Your First Request
 
-Wenn du die API ausprobieren willst, kannst du diese ganz einfach austesten, indem du versuchst unsere Meldungen zu erhalten.
-Verwende dazu einfach folgendes:
+If you want to try out the API, you can easily test it by trying to receive our messages.
+Simply use the following:
 
 ```http
 GET /v4/reports HTTP/1.1
@@ -25,8 +24,8 @@ Authorization: YOUR_ACCESS_TOKEN
 
 ## Response Handling
 
-Solltest du eine Anfrage an uns senden wird immer im JSON Format geantwortet, dieses JSON Format kann von Statuscode zu Statuscode unterscheiden
-Siehe dazu [api-docs.md](api-docs.md)
+If you send us a request, we will always reply in JSON format, this JSON format can differ from status code to status code
+See [api-docs.md](api-docs.md)
 
 <!--## API Usage Tips
 Offer tips and best practices for using the API effectively and efficiently.
