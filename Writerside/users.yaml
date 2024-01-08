@@ -86,40 +86,6 @@ paths:
                   example:
                     - true
                   readOnly: true
-  /v4/users/create:
-    post:
-      summary: Create a new User
-      description: Create a new Satowa Network User with all data
-      consumes:
-        - application/json
-      parameters:
-        - name: username
-          in: formData
-          description: The Username of the Account
-          required: true
-          schema:
-            type: string
-        - name: email
-          in: formData
-          description: The email of the Account
-          required: true
-          schema:
-            type: string
-            format: email
-        - name: password
-          in: formData
-          description: The password of the Account
-          required: true
-          schema:
-            type: string
-            format: password
-        - name: country
-          in: formData
-          description: The country of the Account
-          required: true
-          schema:
-            type: string
-            maxLength: 2
   /v4/users/:userID/settings:
     get:
       summary: Get User Account Settings
@@ -198,3 +164,79 @@ paths:
                 isBusiness:
                   type: boolean
                   readOnly: true
+  /v4/users/create:
+    post:
+      summary: Create a new User
+      description: Create a new Satowa Network User with all data
+      consumes:
+        - application/json
+      parameters:
+        - name: username
+          in: formData
+          description: The Username of the Account
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: formData
+          description: The email of the Account
+          required: true
+          schema:
+            type: string
+            format: email
+        - name: password
+          in: formData
+          description: The password of the Account
+          required: true
+          schema:
+            type: string
+            format: password
+        - name: country
+          in: formData
+          description: The country of the Account
+          required: true
+          schema:
+            type: string
+            maxLength: 2
+  /v4/users/:userID/block:
+    patch:
+      summary: Disable a User Account
+      description: Disable and block the login for that User
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Default success result
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example:
+                    true
+                  readOnly: true
+        401:
+          description: Invalid API Key result
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                success:
+                  type: boolean
+                  example:
+                    false
+                  readOnly: true
+                error:
+                  properties:
+                    message:
+                      type: string
+                      example:
+                        Invalid API Key
+                      readOnly: true
+                    code:
+                      type: integer
+                      example:
+                        null
