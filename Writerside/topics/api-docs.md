@@ -4,29 +4,33 @@
 
 ## Introduction
 
-Provide a brief introduction to the API, explaining its purpose and scope.
+Welcome to the Satowa Network API documentation. Here you will find all important information about
+the official API documentation. Due to the fact that the API is currently in open beta it is possible
+that this documentation is not 100% correct or that all information is available.
 
 ## What you can do using SN API
 
-Die Satowa Network API (kurz SN API) bietet Entwicklern Möglichkeiten wie Meldungen Abrufen, Meldungen erstellen, Transaktionen zu tätigen und viele mehr.
+The Satowa Network offers developers and other networks, social media servers and many more the possibility to work with us and thus create a network full of trust and possibilities to work together.
+Since the release of API version 4, the Satowa Network also has its own transaction system. With this system it is possible to create and receive transactions and other important requests.
 
 ## Authentication
 
-Das Satowa Network verwendet seit Version 4 die ganze Normale HTTP Header Authentifizierung mit dem Authorization header.
-
+Since version 4, the Satowa Network uses the entire normal HTTP header authentication with the Authorization header.
 ## Base URL
 
 https://api.satowa-network.eu
 
 ## Rate Limiting
 
-Das Satowa Network verwendet aus Sicherheitsgründen ein Rate-limit.
-Man kann mit einer ganzen normalen API Key oder auch ohne nur 10 Anfragen die Minute durchführen bevor man ein Rate Limit bekommt
-Sollte man einen Enterprise API Key besitzen, gibt es keine Rat Limiting begrenzungen mehr.
+The Satowa Network uses a rate limit for security reasons.
+You can make only 10 requests per minute with or without a normal API key before you get a rate limit
+If you have an Enterprise API Key, there are no more rate-limiting restrictions.
 
 ## Error Handling
 
-Sollte ein Fehler aufkommen sollte bei bestimmten Fehlermeldungen eine bestimmte JSON Response zurück gegeben werden. 
+We have built our API from the beginning so that you always get a very detailed error message.
+However, there may be error messages that you cannot understand 100%. If there are internal
+errors, please report them to us, even if we have an error reporting system
 
 **404 Not found**
 
@@ -44,7 +48,7 @@ Sollte ein Fehler aufkommen sollte bei bestimmten Fehlermeldungen eine bestimmte
 
 **200 Success**
 
-Die 200 Statusmeldungen haben immer einen bestimmten wert allerdings ändert sich nichts an der "success" Zeile.
+The 200 status messages always have a certain value, but nothing changes in the "success" line.
 ```JSON
 {
   "success": true,
@@ -53,7 +57,7 @@ Die 200 Statusmeldungen haben immer einen bestimmten wert allerdings ändert sic
 ```
 **500 Internal Server Error**
 
-Die 500 Statusmeldungen sind ein Spezieller fall bei uns diese besitzen in den meisten Fällen folgenden Inhalt:
+The 500 status messages are a special case for us and in most cases have the following content:
 
 ```JSON
 {
@@ -72,10 +76,10 @@ Die 500 Statusmeldungen sind ein Spezieller fall bei uns diese besitzen in den m
 ```
 ## Versioning
 
-Das Satowa Network besitzt ein Release Day. Der Release Day ist stand 2.11.2023 der 15. Tag des Monats. 
-Anders als bei den Projekten vom Satowa Network besitzt die API eine eigene und einfache Art von Versioning.
-Das Versioning besteht immer aus dem buchstaben v gefolgt von einer Zahl. Die aktuellste Version ist v4
-Um eine Version auszuwählen muss bei dem Root Link dann die jeweilige Version angegeben werden.
+The Satowa Network has a release day. The release day is the 15th day of the month as of 08.01.2024.
+Unlike the Satowa Network projects, the API has its own, simple type of versioning.
+The versioning always consists of the letter v followed by a number. The latest version is v4
+To select a version, the respective version must be specified in the root link.
 
 
 <seealso>

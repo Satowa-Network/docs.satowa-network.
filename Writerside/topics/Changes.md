@@ -1,5 +1,44 @@
 # Changes
 
+## 08,1 2024
+<table>
+    <tr>
+        <td>Method</td>
+        <td>Changes</td>
+    </tr>
+    <tr>
+        <td><a href="users.md"></a></td>
+        <td>Removed warning message</td>
+    </tr>
+    <tr>
+        <td><a href="api-docs.md"></a></td>
+        <td>Fixed many typos and translated everything to English</td>
+    </tr>
+    <tr>
+        <td><a href="API-quickstart.md"></a></td>
+        <td>Fixed many typos and translated everything to English</td>
+    </tr>
+    <tr>
+        <td><a href="API-reference.md"></a></td>
+        <td>Fixed many typos and translated everything to English</td>
+    </tr>
+</table>
+
+## December 18, 2023
+<table>
+    <tr>
+        <td>Method</td>
+        <td>Changes</td>
+    </tr>
+    <tr>
+        <td><a href="users.md"></a></td>
+        <td><list><li>Added User Settings Endpoint</li><li>Added Delete User Endpoint</li></list></td>
+    </tr>
+    <tr>
+        <td><a href="wallet.md"></a></td>
+        <td>Renamed :userID to :IWAN</td>
+    </tr>
+</table>
 <!-- Maintain a changelog or release notes section
 to inform users about updates, changes, and new features in different API versions -->
 ## November 25, 2023
